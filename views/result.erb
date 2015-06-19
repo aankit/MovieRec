@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototype_results.com</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+  </head>
+
+  <body id="result">
+    <h1>Results</h1>
+    <% @top_ten_alpha.each do |movie|%>
+    <ol><li><%= movie %></li></ol>
+    <% end %>
+    <br><br>
+    <% @top_ten_year.each do |key,value|%>
+    <ol><li><%= "#{key}, released in #{value}" %></li></ol>
+    <% end %>
+    <br><br>  
+    <% @top_ten_vote.each do |key,value| %>
+    <ol><li><%= "#{key}, voting average of #{value}" %></li></ol>
+    <% end %>
+    
+   
+  </body>
+  
+</html>

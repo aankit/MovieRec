@@ -31,16 +31,14 @@ end
 
 def top_ten_vote(title_search, vote_avg_search)
   results = Tmdb::Movie.find(title_search)
-  vote_avg_search = vote_avg_search.to_i
-  movie_vote = {}
-  results.each do |result|
-    rate = result.vote_average
-    if rate >= vote_avg_search - 1 && rate <= vote_avg_search + 1
-      movie_title = result.original_title
-      movie_vote[movie_title] = rate
+    vote_avg_search = vote_avg_search.to_i
+    movie_vote = {}
+    results.each do |result|
+      rate = result.vote_average
+      if rate >= vote_avg_search - 1 && rate <= vote_avg_search + 1
+        movie_title = result.original_title
+        movie_vote[movie_title] = rate
+      end
     end
-  end
   return movie_vote
 end
-
-    

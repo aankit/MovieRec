@@ -3,24 +3,39 @@
   <head>
     <title>Prototype_results.com</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </head>
 
   <body id="result">
-    <h1>Results</h1>
+    <h1 class="header">Results</h1>
+    <div class="list">
+    <h2 class="header">Top 10 movies containing keyword</h2>
     <% @top_ten_alpha.each do |movie|%>
-    <ol><li><%= movie %></li></ol>
+    <ul><li><%= movie %></li></ul>
     <% end %>
     <br><br>
+    </div>
+    <div class="list">
+    <h2 class="header">Top movies within 3 years</h2>
     <% @top_ten_year.each do |key,value|%>
-    <ol><li><%= "#{key}, released in #{value}" %></li></ol>
+    <ul><li><%= "#{key}, released in #{value}" %></li></ul>
     <% end %>
-    <br><br>  
+    <br><br>
+    </div>
+    <div class="list">
+    <h2 class="header">Top movies within one vote</h2>
     <% @top_ten_vote.each do |key,value| %>
-    <ol><li><%= "#{key}, voting average of #{value}" %></li></ol>
+    <ul><li><%= "#{key}, voting average of #{value}" %></li></ul>
     <% end %>
-    
-   
+    </div>
+   <img alt="bottom" src="/images/bottom2.jpg" height="300" width="1300">
   </body>
   
 </html>

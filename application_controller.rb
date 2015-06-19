@@ -15,7 +15,7 @@ class MyApp < Sinatra::Base
     @date = params["date"]
     @top_ten_year = top_ten_year(@title, @date)
     @vote_avg = params["vote"]
-    @top_ten_vote = top_ten_vote(@title, @vote)
+    @top_ten_vote = top_ten_vote(@title, @vote_avg)
     puts @top_ten_alpha
     puts @top_ten_year
     puts @top_ten_vote

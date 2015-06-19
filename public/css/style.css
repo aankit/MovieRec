@@ -1,3 +1,10 @@
 body {
   background: #6666FF;
 }
+
+h4 {
+  text-align: center;
+  font-family: courier New;
+  font-style: bold;
+  font-size: 2.5em;
+}

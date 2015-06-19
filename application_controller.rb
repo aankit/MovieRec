@@ -11,9 +11,13 @@ class MyApp < Sinatra::Base
 
   post '/' do
     @title = params["title"]
-    @genre = params["genre"]
-    puts find(@title)
-    puts find(@genre)
+    @top_ten_alpha = top_ten_alpha(@title)
+    @date = params["date"]
+    @top_ten_year = top_ten_year(@title, @date)
+    puts @top_ten_year
     erb :index
   end
+  
+  
+  
 end

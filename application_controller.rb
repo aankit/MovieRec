@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require
-require '/home/nitrous/code/labs/my_project/models/model.rb'
+require './models/model.rb'
 
 
 class MyApp < Sinatra::Base
